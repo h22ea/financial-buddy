@@ -14,6 +14,7 @@
 		46778868246474660053DEA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46778867246474660053DEA0 /* Assets.xcassets */; };
 		4677886B246474660053DEA0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4677886A246474660053DEA0 /* Preview Assets.xcassets */; };
 		4677886E246474660053DEA0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4677886C246474660053DEA0 /* LaunchScreen.storyboard */; };
+		46778879246478FD0053DEA0 /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46778878246478FD0053DEA0 /* Background.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		4677886A246474660053DEA0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4677886D246474660053DEA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4677886F246474660053DEA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		46778878246478FD0053DEA0 /* Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		4677885D246474630053DEA0 /* Financial Buddy */ = {
 			isa = PBXGroup;
 			children = (
+				46778875246476A80053DEA0 /* Views */,
 				4677885E246474630053DEA0 /* AppDelegate.swift */,
 				46778860246474630053DEA0 /* SceneDelegate.swift */,
 				46778865246474640053DEA0 /* ContentView.swift */,
@@ -76,6 +79,14 @@
 				4677886A246474660053DEA0 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		46778875246476A80053DEA0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				46778878246478FD0053DEA0 /* Background.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,6 +164,7 @@
 				4677885F246474630053DEA0 /* AppDelegate.swift in Sources */,
 				46778866246474640053DEA0 /* ContentView.swift in Sources */,
 				46778861246474630053DEA0 /* SceneDelegate.swift in Sources */,
+				46778879246478FD0053DEA0 /* Background.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
