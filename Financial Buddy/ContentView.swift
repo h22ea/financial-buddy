@@ -9,6 +9,9 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var isShowing = false
+    @State private var enabled = false
+    @State private var dragAmount = CGSize.zero
     var body: some View {
         HStack {
             Spacer()
@@ -55,14 +58,22 @@ struct ContentView: View {
                 .frame(height: 220)
                 .padding(10)
                 Spacer()
-            }
+            }.offset(self.dragAmount)
+            .animation(Animation.default.delay(0))
             Spacer()
-        }.background(Color.black.opacity(0.1)).edgesIgnoringSafeArea([.top, .bottom])
+        }.background(Color.black.opacity(0.1)).edgesIgnoringSafeArea([.top, .bottom]).gesture(
+                   DragGesture()
+                       .onChanged { self.dragAmount = $0.translation }
+                       .onEnded { _ in
+                           self.dragAmount = .zero
+                           self.enabled.toggle()
+                       }
+               )
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView().transition(.slide)
     }
 }
